@@ -16,6 +16,10 @@
 		CE2380C5249C9DE30045A7C0 /* ViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380C4249C9DE30045A7C0 /* ViewController+UI.swift */; };
 		CE2380C7249CA18B0045A7C0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380C6249CA18B0045A7C0 /* SignUpViewController.swift */; };
 		CE2380C9249CAE150045A7C0 /* SignUpViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380C8249CAE150045A7C0 /* SignUpViewController+UI.swift */; };
+		CE2380CB24A4D9F00045A7C0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380CA24A4D9F00045A7C0 /* SignInViewController.swift */; };
+		CE2380CD24A4DCF50045A7C0 /* SignInViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380CC24A4DCF50045A7C0 /* SignInViewController+UI.swift */; };
+		CE2380CF24A4FB7C0045A7C0 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380CE24A4FB7C0045A7C0 /* ForgotPasswordViewController.swift */; };
+		CE2380D124A4FBB60045A7C0 /* ForgotPasswordViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380D024A4FBB60045A7C0 /* ForgotPasswordViewController+UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		CE2380C4249C9DE30045A7C0 /* ViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UI.swift"; sourceTree = "<group>"; };
 		CE2380C6249CA18B0045A7C0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CE2380C8249CAE150045A7C0 /* SignUpViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+UI.swift"; sourceTree = "<group>"; };
+		CE2380CA24A4D9F00045A7C0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CE2380CC24A4DCF50045A7C0 /* SignInViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+UI.swift"; sourceTree = "<group>"; };
+		CE2380CE24A4FB7C0045A7C0 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		CE2380D024A4FBB60045A7C0 /* ForgotPasswordViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordViewController+UI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,10 @@
 				CE2380B4249C5C2E0045A7C0 /* ViewController.swift */,
 				CE2380C4249C9DE30045A7C0 /* ViewController+UI.swift */,
 				CE2380B6249C5C2E0045A7C0 /* Main.storyboard */,
+				CE2380CE24A4FB7C0045A7C0 /* ForgotPasswordViewController.swift */,
+				CE2380D024A4FBB60045A7C0 /* ForgotPasswordViewController+UI.swift */,
+				CE2380CA24A4D9F00045A7C0 /* SignInViewController.swift */,
+				CE2380CC24A4DCF50045A7C0 /* SignInViewController+UI.swift */,
 				CE2380C8249CAE150045A7C0 /* SignUpViewController+UI.swift */,
 				CE2380C6249CA18B0045A7C0 /* SignUpViewController.swift */,
 				CE2380B9249C5C300045A7C0 /* Assets.xcassets */,
@@ -147,9 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2380CD24A4DCF50045A7C0 /* SignInViewController+UI.swift in Sources */,
+				CE2380CB24A4D9F00045A7C0 /* SignInViewController.swift in Sources */,
 				CE2380C9249CAE150045A7C0 /* SignUpViewController+UI.swift in Sources */,
 				CE2380B5249C5C2E0045A7C0 /* ViewController.swift in Sources */,
+				CE2380D124A4FBB60045A7C0 /* ForgotPasswordViewController+UI.swift in Sources */,
 				CE2380B1249C5C2E0045A7C0 /* AppDelegate.swift in Sources */,
+				CE2380CF24A4FB7C0045A7C0 /* ForgotPasswordViewController.swift in Sources */,
 				CE2380C5249C9DE30045A7C0 /* ViewController+UI.swift in Sources */,
 				CE2380B3249C5C2E0045A7C0 /* SceneDelegate.swift in Sources */,
 				CE2380C7249CA18B0045A7C0 /* SignUpViewController.swift in Sources */,

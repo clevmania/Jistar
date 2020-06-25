@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8722924B66E31B6CF826C079 /* Pods_Jistar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B7E9810006005A3F832FEC /* Pods_Jistar.framework */; };
 		CE2380B1249C5C2E0045A7C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380B0249C5C2E0045A7C0 /* AppDelegate.swift */; };
 		CE2380B3249C5C2E0045A7C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380B2249C5C2E0045A7C0 /* SceneDelegate.swift */; };
 		CE2380B5249C5C2E0045A7C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380B4249C5C2E0045A7C0 /* ViewController.swift */; };
@@ -20,9 +21,12 @@
 		CE2380CD24A4DCF50045A7C0 /* SignInViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380CC24A4DCF50045A7C0 /* SignInViewController+UI.swift */; };
 		CE2380CF24A4FB7C0045A7C0 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380CE24A4FB7C0045A7C0 /* ForgotPasswordViewController.swift */; };
 		CE2380D124A4FBB60045A7C0 /* ForgotPasswordViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380D024A4FBB60045A7C0 /* ForgotPasswordViewController+UI.swift */; };
+		CE2380D324A52C790045A7C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE2380D224A52C790045A7C0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		279778611F717350F9889719 /* Pods-Jistar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jistar.debug.xcconfig"; path = "Target Support Files/Pods-Jistar/Pods-Jistar.debug.xcconfig"; sourceTree = "<group>"; };
+		42B3E0BC92655280A9D331BE /* Pods-Jistar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jistar.release.xcconfig"; path = "Target Support Files/Pods-Jistar/Pods-Jistar.release.xcconfig"; sourceTree = "<group>"; };
 		CE2380AD249C5C2E0045A7C0 /* Jistar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jistar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2380B0249C5C2E0045A7C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2380B2249C5C2E0045A7C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		CE2380CC24A4DCF50045A7C0 /* SignInViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+UI.swift"; sourceTree = "<group>"; };
 		CE2380CE24A4FB7C0045A7C0 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CE2380D024A4FBB60045A7C0 /* ForgotPasswordViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordViewController+UI.swift"; sourceTree = "<group>"; };
+		CE2380D224A52C790045A7C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1B7E9810006005A3F832FEC /* Pods_Jistar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jistar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +51,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8722924B66E31B6CF826C079 /* Pods_Jistar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15B87F4FBC7C0D4F22DC47EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1B7E9810006005A3F832FEC /* Pods_Jistar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BA15EFF9269EC84D3E8A22B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				279778611F717350F9889719 /* Pods-Jistar.debug.xcconfig */,
+				42B3E0BC92655280A9D331BE /* Pods-Jistar.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE2380A4249C5C2E0045A7C0 = {
 			isa = PBXGroup;
 			children = (
 				CE2380AF249C5C2E0045A7C0 /* Jistar */,
 				CE2380AE249C5C2E0045A7C0 /* Products */,
+				6BA15EFF9269EC84D3E8A22B /* Pods */,
+				15B87F4FBC7C0D4F22DC47EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +97,7 @@
 		CE2380AF249C5C2E0045A7C0 /* Jistar */ = {
 			isa = PBXGroup;
 			children = (
+				CE2380D224A52C790045A7C0 /* GoogleService-Info.plist */,
 				CE2380B0249C5C2E0045A7C0 /* AppDelegate.swift */,
 				CE2380B2249C5C2E0045A7C0 /* SceneDelegate.swift */,
 				CE2380B4249C5C2E0045A7C0 /* ViewController.swift */,
@@ -95,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE2380C1249C5C300045A7C0 /* Build configuration list for PBXNativeTarget "Jistar" */;
 			buildPhases = (
+				FE176F32FC0A0F0A117F74B2 /* [CP] Check Pods Manifest.lock */,
 				CE2380A9249C5C2E0045A7C0 /* Sources */,
 				CE2380AA249C5C2E0045A7C0 /* Frameworks */,
 				CE2380AB249C5C2E0045A7C0 /* Resources */,
+				076DB54A9DCC3A101B7DEECB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,12 +177,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2380BD249C5C300045A7C0 /* LaunchScreen.storyboard in Resources */,
+				CE2380D324A52C790045A7C0 /* GoogleService-Info.plist in Resources */,
 				CE2380BA249C5C300045A7C0 /* Assets.xcassets in Resources */,
 				CE2380B8249C5C2E0045A7C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		076DB54A9DCC3A101B7DEECB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jistar/Pods-Jistar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jistar/Pods-Jistar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Jistar/Pods-Jistar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE176F32FC0A0F0A117F74B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jistar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE2380A9249C5C2E0045A7C0 /* Sources */ = {
@@ -310,6 +383,7 @@
 		};
 		CE2380C2249C5C300045A7C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 279778611F717350F9889719 /* Pods-Jistar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,6 +402,7 @@
 		};
 		CE2380C3249C5C300045A7C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42B3E0BC92655280A9D331BE /* Pods-Jistar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

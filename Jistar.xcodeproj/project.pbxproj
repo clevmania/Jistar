@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		CE2380CF24A4FB7C0045A7C0 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380CE24A4FB7C0045A7C0 /* ForgotPasswordViewController.swift */; };
 		CE2380D124A4FBB60045A7C0 /* ForgotPasswordViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2380D024A4FBB60045A7C0 /* ForgotPasswordViewController+UI.swift */; };
 		CE2380D324A52C790045A7C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE2380D224A52C790045A7C0 /* GoogleService-Info.plist */; };
+		CE2380D524A538A30045A7C0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CE2380D424A538A30045A7C0 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		CE2380CE24A4FB7C0045A7C0 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CE2380D024A4FBB60045A7C0 /* ForgotPasswordViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordViewController+UI.swift"; sourceTree = "<group>"; };
 		CE2380D224A52C790045A7C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE2380D424A538A30045A7C0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E1B7E9810006005A3F832FEC /* Pods_Jistar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jistar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,7 +74,6 @@
 				279778611F717350F9889719 /* Pods-Jistar.debug.xcconfig */,
 				42B3E0BC92655280A9D331BE /* Pods-Jistar.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -112,6 +113,7 @@
 				CE2380B9249C5C300045A7C0 /* Assets.xcassets */,
 				CE2380BB249C5C300045A7C0 /* LaunchScreen.storyboard */,
 				CE2380BE249C5C300045A7C0 /* Info.plist */,
+				CE2380D424A538A30045A7C0 /* .gitignore */,
 			);
 			path = Jistar;
 			sourceTree = "<group>";
@@ -176,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2380D524A538A30045A7C0 /* .gitignore in Resources */,
 				CE2380BD249C5C300045A7C0 /* LaunchScreen.storyboard in Resources */,
 				CE2380D324A52C790045A7C0 /* GoogleService-Info.plist in Resources */,
 				CE2380BA249C5C300045A7C0 /* Assets.xcassets in Resources */,

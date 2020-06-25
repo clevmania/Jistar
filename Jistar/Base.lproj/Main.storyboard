@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ArM-GM-tbs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u7m-CR-qB4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -52,6 +52,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createNewAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sjT-2A-k2A"/>
+                                    <segue destination="LG6-gg-abd" kind="show" id="3YH-Jm-HQQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahO-dg-Fio">
@@ -96,6 +97,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Xeu-JN-tYE"/>
                     <connections>
                         <outlet property="createAccountButton" destination="z7C-hg-9IS" id="f9y-7U-wYa"/>
                         <outlet property="orLabel" destination="ahO-dg-Fio" id="qKU-lY-yFn"/>
@@ -107,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="127"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="MT0-sW-DuH">
@@ -120,6 +122,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vey-rf-Xdj">
                                 <rect key="frame" x="20" y="44" width="20" height="22"/>
                                 <state key="normal" image="clear" catalog="system"/>
+                                <connections>
+                                    <action selector="dismissController:" destination="LG6-gg-abd" eventType="touchUpInside" id="YaW-Lf-J8X"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV3-Cv-Xaz">
                                 <rect key="frame" x="20" y="86" width="42" height="21"/>
@@ -208,6 +213,9 @@
                                     <constraint firstAttribute="height" constant="30" id="9et-Re-9mM"/>
                                 </constraints>
                                 <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <segue destination="zZ8-8K-1di" kind="show" id="fdk-Kz-m36"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -236,6 +244,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fdx-YZ-vtR"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8q2-tV-ziJ"/>
                     <connections>
                         <outlet property="avatar" destination="CYo-3e-UU3" id="AYa-Dz-Tsr"/>
                         <outlet property="emailContainerView" destination="fp9-Qz-d9D" id="i9d-9L-Xxt"/>
@@ -251,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LR4-ZY-EL8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091" y="127"/>
+            <point key="canvasLocation" x="2000.0000000000002" y="126.5625"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="FUd-lz-7Hz">
@@ -320,6 +329,9 @@
                                     <constraint firstAttribute="height" constant="30" id="ePb-GL-pmY"/>
                                 </constraints>
                                 <state key="normal" title=" Sign Up"/>
+                                <connections>
+                                    <action selector="dismissSignInViewController:" destination="zZ8-8K-1di" eventType="touchUpInside" id="BIH-X0-Pjp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60f-rD-1w7">
                                 <rect key="frame" x="20" y="837" width="374" height="30"/>
@@ -329,6 +341,9 @@
                                 <state key="normal" title="Fogot Password">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ArM-GM-tbs" kind="show" id="Xhu-gf-hOQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -353,6 +368,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ksx-c0-9b1"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bMA-Yc-ltg"/>
                     <connections>
                         <outlet property="emailContainerView" destination="hqX-aT-ItH" id="E6u-Oy-22l"/>
                         <outlet property="emailTextField" destination="z73-tT-fFI" id="GJe-0p-XlQ"/>
@@ -366,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HxE-xR-Jaz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1910" y="127"/>
+            <point key="canvasLocation" x="2818.840579710145" y="126.5625"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="7wz-4f-lAh">
@@ -379,6 +395,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyB-oX-0hB">
                                 <rect key="frame" x="20" y="44" width="20" height="22"/>
                                 <state key="normal" image="clear" catalog="system"/>
+                                <connections>
+                                    <action selector="dismissForgotPasswordViewController:" destination="ArM-GM-tbs" eventType="touchUpInside" id="Uks-AZ-Avm"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtf-T3-fXg">
                                 <rect key="frame" x="20" y="106" width="374" height="50"/>
@@ -421,6 +440,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uX5-An-7Fx"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ibR-oH-YaJ"/>
                     <connections>
                         <outlet property="closeButton" destination="PyB-oX-0hB" id="3bf-nP-mug"/>
                         <outlet property="emailContainerView" destination="dtf-T3-fXg" id="niI-ce-hHb"/>
@@ -430,7 +450,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7a-mK-TDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2698.5507246376815" y="126.5625"/>
+            <point key="canvasLocation" x="3608.6956521739135" y="126.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WVs-ce-F1A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="u7m-CR-qB4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="44F-3J-XBg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="b0Q-ob-glC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPU-TP-46W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
     <resources>

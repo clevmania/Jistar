@@ -22,6 +22,10 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
+    @IBAction func dismissSignInViewController(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController {
 
@@ -25,14 +27,39 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var signinButton: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
     @IBAction func dismissController(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupUI()
+    @IBAction func signUpButtonPressed(_ sender: Any) {
+        Auth.auth().createUser(withEmail: "tester237@gmail.com", password: "Tester@123") { (authDataResult, error) in
+            if error != nil{
+                print(error!.localizedDescription)
+                return
+            }
+            
+            if let authData = authDataResult{
+                let dict : Dictionary<String, Any> = [
+                    "uid" : authData.user.uid,
+                    "email" : authData.user.email,
+                    "profileImageUrl" : "",
+                    "status" : "Welcome to Jistar"
+                ]
+                
+                Database.database().reference().child("users")
+                    .child(authData.user.uid).updateChildValues(dict) { (error, ref) in
+                        if error == nil{
+                            print("Done updating user node!!")
+                        }
+                }
+                
+            }
+        }
     }
 
     func setupUI(){

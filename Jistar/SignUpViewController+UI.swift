@@ -22,6 +22,17 @@ extension SignUpViewController {
     func setupAvatar(){
         avatar.layer.cornerRadius = 40
         avatar.clipsToBounds = true
+        avatar.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(presentImagePicker))
+        avatar.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func presentImagePicker(){
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        self.present(imagePicker, animated: true, completion: nil)
     }
     
     func setupFullNameField(){
@@ -75,5 +86,18 @@ extension SignUpViewController {
         signupButton.backgroundColor = UIColor.black
         signupButton.layer.cornerRadius = 5
         signupButton.clipsToBounds = true
+    }
+}
+
+extension SignUpViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let imageSelected = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+            avatar.image = imageSelected
+        }
+        
+        if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            avatar.image = originalImage
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
 }

@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseStorage
 
 class SignUpViewController: UIViewController {
 
@@ -27,6 +28,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var signinButton: UIButton!
     
+    var image : UIImage? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -37,25 +40,53 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
-        Auth.auth().createUser(withEmail: "tester237@gmail.com", password: "Tester@123") { (authDataResult, error) in
+        guard let imageSelected = self.image else {
+            print("Please select an image")
+            return
+        }
+        
+        guard let imageData = imageSelected.jpegData(compressionQuality: 0.4) else {
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: "tester245@gmail.com", password: "Tester@123") { (authDataResult, error) in
             if error != nil{
                 print(error!.localizedDescription)
                 return
             }
             
             if let authData = authDataResult{
-                let dict : Dictionary<String, Any> = [
+                var dict : Dictionary<String, Any> = [
                     "uid" : authData.user.uid,
-                    "email" : authData.user.email,
+                    "email" : authData.user.email!,
                     "profileImageUrl" : "",
                     "status" : "Welcome to Jistar"
                 ]
                 
-                Database.database().reference().child("users")
-                    .child(authData.user.uid).updateChildValues(dict) { (error, ref) in
-                        if error == nil{
-                            print("Done updating user node!!")
+                let storageRef = Storage.storage().reference(forURL: "gs://barbershop-deed6.appspot.com")
+                let storageProfileRef = storageRef.child("profileImage").child(authData.user.uid)
+                
+                let metaData = StorageMetadata()
+                metaData.contentType = "image/jpg"
+                
+                storageProfileRef.putData(imageData, metadata: metaData) { (storageMetaData, error) in
+                    if(error != nil){
+                        print(error?.localizedDescription)
+                        return
+                    }
+                    
+                    storageProfileRef.downloadURL { (url, error) in
+                        if let imageDownloadUrl = url {
+                            dict["profileImageUrl"] = imageDownloadUrl
+                            
+                            Database.database().reference().child("users")
+                                .child(authData.user.uid).updateChildValues(dict) { (error, ref) in
+                                    if error == nil{
+                                        print("Done updating user node!!")
+                                    }
+                            }
                         }
+                    }
                 }
                 
             }
